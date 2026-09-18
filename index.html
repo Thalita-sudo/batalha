@@ -1,1 +1,338 @@
+!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Mentalista - Batalha de Páginas</title>
+    <style>
+        /* CSS Integrado - Bônus Estilizou */
+        :root {
+            --primary-color: #8b0000;
+            --accent-color: #d90429;
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --border-color: #333333;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            background: linear-gradient(135deg, #2c0003, #121212);
+            border-bottom: 3px solid var(--accent-color);
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            color: #d1d1d1;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        section {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            color: var(--accent-color);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: var(--text-color);
+            font-size: 1.05rem;
+        }
+
+        .img-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 4px 12px rgba(139, 0, 0, 0.3);
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            background-color: #2a2a2a;
+            margin-bottom: 10px;
+            padding: 12px 15px;
+            border-left: 4px solid var(--accent-color);
+            border-radius: 4px;
+        }
+
+        ul li strong {
+            color: #ffffff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        thead {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            background-color: #252525;
+        }
+
+        tbody tr:nth-of-type(even) {
+            background-color: #1a1a1a;
+        }
+
+        tbody tr:hover {
+            background-color: #333333;
+        }
+
+        a {
+            color: #ff4d4d;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #cccccc;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            background-color: #2b2b2b;
+            color: #ffffff;
+            font-size: 1rem;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        button[type="submit"] {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: var(--accent-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho Principal (Título Rei) -->
+    <header>
+        <h1>O Mentalista</h1>
+        <p>A mente humana não esconde segredos para Patrick Jane.</p>
+    </header>
+
+    <main>
+        <!-- Seção 1: Sobre a Série -->
+        <section>
+            <h2>Sobre a Série</h2>
+            
+            <p>
+                <strong>O Mentalista</strong> (<em>The Mentalist</em>) é uma aclamada série de drama policial americana transmitida de 2008 a 2015. A história acompanha Patrick Jane, um homem com extraordinários poderes de observação e dedução, que anteriormente fingia ser um médium vidente.
+            </p>
+
+            <p>
+                Após ter sua esposa e filha tragicamente mortas pelo infame serial killer conhecido como <strong>Red John</strong>, Jane abandona a farsa de médium e passa a atuar como consultor independente para o Bureau de Investigação da Califórnia (CBI). Seu principal objetivo pessoal é encontrar o assassino de sua família.
+            </p>
+
+            <p>
+                Com seu estilo não convencional, sarcasmo afiado e habilidade de manipular e ler as pessoas, Patrick Jane ajuda a equipe a resolver os homicídios mais intrigantes e complexos do estado da Califórnia.
+            </p>
+
+            <!-- Imagem com atributo ALT preenchido -->
+            <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="Patrick Jane em terno elegante, simbolizando a observação detalhada em O Mentalista">
+            </div>
+
+            <!-- Link externo abrindo em nova aba -->
+            <p>
+                Quer saber mais sobre o elenco e curiosidades? Visite a página oficial de <a href="https://www.imdb.com/title/tt1196946/" target="_blank">O Mentalista no IMDb</a>.
+            </p>
+        </section>
+
+        <!-- Seção 2: Personagens Principais -->
+        <section>
+            <h2>Equipe Principal do CBI</h2>
+            <p>Conheça os membros da equipe que trabalham ao lado de Patrick Jane na resolução dos casos:</p>
+            
+            <!-- Lista com pelo menos 4 itens -->
+            <ul>
+                <li><strong>Patrick Jane:</strong> Consultor do CBI, ex-médium e mestre na arte da observação e leitura fria.</li>
+                <li><strong>Teresa Lisbon:</strong> Agente Sênior responsável por liderar a equipe e manter Jane sob controle.</li>
+                <li><strong>Kimball Cho:</strong> Agente focado, sério, sarcástico e especialista em interrogatórios.</li>
+                <li><strong>Wayne Rigsby:</strong> Agente experiente em incêndios criminosos e táticas de campo.</li>
+                <li><strong>Grace Van Pelt:</strong> Agente novata da equipe e especialista em tecnologia e pesquisa de dados.</li>
+            </ul>
+        </section>
+
+        <!-- Seção 3: Tabela de Temporadas -->
+        <section>
+            <h2>Resumo das Temporadas</h2>
+            <p>Confira a estrutura das principais temporadas da série:</p>
+
+            <!-- Tabela com thead, th e 3+ linhas -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Temporada</th>
+                        <th>Episódios</th>
+                        <th>Ano de Lançamento</th>
+                        <th>Foco Narrativo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1ª Temporada</td>
+                        <td>23</td>
+                        <td>2008</td>
+                        <td>Apresentação do CBI e o mistério de Red John.</td>
+                    </tr>
+                    <tr>
+                        <td>3ª Temporada</td>
+                        <td>24</td>
+                        <td>2010</td>
+                        <td>Infiltração de cúmplices do Red John no governo.</td>
+                    </tr>
+                    <tr>
+                        <td>6ª Temporada</td>
+                        <td>22</td>
+                        <td>2013</td>
+                        <td>Revelação da identidade final de Red John.</td>
+                    </tr>
+                    <tr>
+                        <td>7ª Temporada</td>
+                        <td>13</td>
+                        <td>2014</td>
+                        <td>Nova fase no FBI e desfecho dos personagens.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Seção 4: Formulário de Contato -->
+        <section>
+            <h2>Formulário de Fã</h2>
+            <p>Cadastre-se para receber novidades, teorias dos episódios e análises de mentalismo:</p>
+
+            <!-- Formulário com nome, email e botão enviar -->
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                </div>
+
+                <button type="submit">Enviar Cadastro</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Batalha de Páginas | Projeto criado com HTML5 e CSS3 sobre a série O Mentalista.</p>
+    </footer>
+
+</body>
+</html>
